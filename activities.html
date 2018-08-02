@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+    <style media="screen">
+    .first {
+      color: black;
+      font-style: italic;
+      text-align: center;
+      font-size: 400%;
+      font-weight: bold;
+    }
+    .second {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      font-size: 100%;
+    }
+    ul {
+      color: black;
+      text-align: center;
+      list-style-position: inside;
+      font-size: 200%;
+    }
+    .center {
+      display: block;
+      margin: 0 auto;
+    }
+    </style>
+  <body>
+    <p class = "first"> ACTIVITIES (to do before you die)</p>
+    <img id="randomimg" src="fangs.jpg" onclick="randomize()" width="450" height="303" class=center>
+    <p class = "second"> click images</p>
+    <ul style="list-style-type:square">
+    <li>Get fake fangs</li>
+    <li>Play all levels of Candy Crush</li>
+    <li>Eat something you're allergic to</li>
+    <li>Get on a billboard</li>
+    <li>Meet Danny Devito</li>
+    <li>Sit on a lily pad</li>
+    <li>Prank call a government official</li>
+    <li>Eat a delicious apple</li>
+    <li>Hire a private investigator to follow you</li>
+    </ul>
+    <a href="index.html"> go home </a>
+
+
+  </body>
+  <script type="text/javascript">
+  var images = [];
+  images[0] = "fangs.jpg";
+  images[1] = "sneeze.jpg";
+  images[2] = "candy.jpg";
+  images[3] = "billboard.jpeg";
+  images[4] = "danny.jpg";
+  images[5] = "lily.jpg";
+  images[6] = "call.jpg";
+  images[7] = "apple.jpg";
+  images[8] = "private.jpg";
+
+
+  var img = document.getElementById("randomimg");
+  function randomize(){
+    var randomNumber = Math.floor(Math.random() * images.length);
+    img.src = images[randomNumber];
+  }
+  </script>
+</html>
